@@ -30,12 +30,12 @@ class Listener(object):
         joint_state_send.header = Header()
 
         joint_state_send.name = [
-            "joint2_to_joint1",
-            "joint3_to_joint2",
-            "joint4_to_joint3",
-            "joint5_to_joint4",
-            "joint6_to_joint5",
-            "joint6output_to_joint6",
+            "arm1_joint",
+            "arm2_joint",
+            "arm3_joint",
+            "arm4_joint",
+            "arm5_joint",
+            "arm6_joint",
         ]
         joint_state_send.velocity = [0]
         joint_state_send.effort = []

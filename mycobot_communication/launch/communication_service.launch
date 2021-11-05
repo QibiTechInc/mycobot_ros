@@ -1,6 +1,6 @@
 <launch>
-	<arg name="port" default="/dev/ttyUSB0" />
-	<arg name="baud" default="115200" />
+	<arg name="port" default="/dev/ttyAMA0" />
+	<arg name="baud" default="1000000" />
 
 	<!-- Open communication service -->
 	<node name="mycobot_services" pkg="mycobot_communication" type="mycobot_services.py" output="screen">

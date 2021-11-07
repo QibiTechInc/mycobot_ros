@@ -12,6 +12,7 @@
 		<arg name="port" value="$(arg port)" />	
 		<arg name="baud" value="$(arg baud)" />	
     </include>
+	<node name="gripper_command" pkg="mycobot_280" type="gripper_topic.py" />
 	<!--<node name="real_listener" pkg="mycobot_280" type="listen_real.py" />
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />-->
 </launch>

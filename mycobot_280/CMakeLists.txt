@@ -29,7 +29,9 @@ catkin_install_python(PROGRAMS
   scripts/detect_marker.py
   scripts/following_marker.py
   scripts/follow_and_pump.py
+  scripts/gripper_topic.py
   scripts/simple_gui.py
+  
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

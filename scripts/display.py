@@ -8,6 +8,7 @@ from std_msgs.msg import Header
 from visualization_msgs.msg import Marker
 
 from pymycobot.mycobot import MyCobot
+from pymycobot import PI_PORT, PI_BAUD  # When using the Raspberry Pi version of myCobot, you can refer to these two variables for MyCobot initialization
 
 
 def talker():
@@ -75,7 +76,7 @@ def talker():
         rate.sleep()
 
 if __name__ == '__main__':
-    port = subprocess.check_output(['echo -n /dev/ttyUSB*'], 
+    port = subprocess.check_output(['echo -n /dev/ttyAMA*'], 
                                     shell=True).decode()
     mycobot = MyCobot(port)
     try:

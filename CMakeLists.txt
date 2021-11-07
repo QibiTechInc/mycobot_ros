@@ -3,7 +3,7 @@ project(myCobotROS)
 add_compile_options(-std=c++11)
 
 ## Find catkin and any catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg serial)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg )
 
 ## Generate added messages and services
 generate_messages(DEPENDENCIES std_msgs)

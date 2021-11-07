@@ -1,12 +1,19 @@
 import time, random, subprocess
 from pymycobot.mycobot import MyCobot
 # from pythonAPI.mycobot3 import MyCobot as MyCobot3
+from pymycobot import PI_PORT, PI_BAUD  # When using the Raspberry Pi version of myCobot, you can refer to these two variables for MyCobot initialization
+
 from pymycobot.genre import Angle, Coord
 
 if __name__ == '__main__': 
-    port = subprocess.check_output(['echo -n /dev/ttyUSB*'], 
+    port = subprocess.check_output(['echo -n /dev/ttyAMA0'], 
                                     shell=True).decode()
-    mycobot = MyCobot(port)
+    
+    #### The following two lines have been modified 
+    mycobot = MyCobot(PI_PORT, PI_BAUD)
+    print (PI_PORT,PI_BAUD)
+    #####
+
 
     print('Start check api\n')
 

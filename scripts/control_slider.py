@@ -6,6 +6,7 @@ import rospy
 from sensor_msgs.msg import JointState
 
 from pymycobot.mycobot import MyCobot
+from pymycobot import PI_PORT, PI_BAUD  # When using the Raspberry Pi version of myCobot, you can refer to these two variables for MyCobot initialization
 
 
 def callback(data):
@@ -29,9 +30,10 @@ def listener():
 
 if __name__ == '__main__':
     print('sart')
-    port = subprocess.check_output(['echo -n /dev/ttyUSB*'], 
+    port = subprocess.check_output(['echo -n /dev/ttyAMA*'], 
                                     shell=True).decode()
     print(port)
-    mc = MyCobot(port)
+    #mc = MyCobot(port)
+    mc = MyCobot(PI_PORT, PI_BAUD)
     print(mc)
     listener()

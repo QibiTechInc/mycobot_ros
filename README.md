@@ -4,7 +4,7 @@ Modified mycobot_ros pkg for myCobot Pi
 
 This is a forked project of [the official repository](https://github.com/elephantrobotics/mycobot_ros)
 
-Clone the pkg into the rpi's local workspace:
+Clone the pkg into the raspberry pi's local workspace:
 ```bash
 git clone -b mycobot-pi https://github.com/QibiTechInc/mycobot_ros.git
 ```

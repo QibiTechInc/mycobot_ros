@@ -18,7 +18,7 @@ Launch the following pkg:
 ```bash
 roslaunch mycobot_280 gripper.launch  
 ```
-This will runs the codes necessary codes for having the gripper in ROS. For commanding the gripper to open, use the `/gripper_command` topic. if you publish 0 and 100 (std_msgs::Float64), the gripper will close or open completely respectively. The numbers in between might not work exactly. 
+This will runs the necessary codes for having the gripper in ROS. For commanding the gripper to open, use the `/gripper_command` topic. if you publish 0 and 100 (std_msgs::Float64), the gripper will close or open completely respectively. The numbers in between might not work exactly. 
 You can get the the gripper current status (a number between 0 and 100) through the topic `/gripper_status`. Note that this topic sometimes publishes -1 instead of the real value, which seems to be a problem from the robot's API (specially, if you are reading the joint_angles, that is to say, you have launched the mycobot.launch , or the MoveIt pkgs before)
 
 ## Having the suction gripper in ROS
